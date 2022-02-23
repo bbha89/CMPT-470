@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css" />
+    <title>Edit Profile</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    
+    <form action="/edit-profile" method="POST" class = "container">
+        <div class = "login-form">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class ="flex-input">
+                <label for="" class = "labels">Full Name:</label>
+                <input type="text" name="full_name" value = "<%= full_name %>" placeholder="Enter full name" id ="full_name" required>
+            </div>
+            <div class ="flex-input">
+                <label for="" class = "labels">Email:</label>
+                <input type="email" name="email" value = "<%= email %>" placeholder="Enter email" id = "email" required>
+            </div>
+            <div class ="flex-input">
+                <label for="" class = "labels">Phone:</label>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value = "<%= phone %>" placeholder="Enter phone" id = "phone" required>
+            </div>
+            <div>
+                <button type="submit">Update User Details</button>
+            </div>
+            <div class = "link-container2">
+                <a href="/profile">Cancel Editing Profile</a>
+            </div>
+        </div>
+    </form>
+
+	
+</body>
+</html>

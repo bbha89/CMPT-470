@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>View Listing</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet"type="text/css" href="/stylesheets/view-listing.css"/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css"/>
+	</head>
+
+	<body>
+		<%- include('partials/nav.ejs') %>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 id="listing-title"><%= listing.title%></h2>
+				</div>
+			</div>
+			<% if(listing.seller_username === username){ %>
+				<div class="row">
+					<div class="col-lg-12">
+							<button class='button-4'><a href="/listing/edit/<%=listing.listingid%>">Edit listing</a></button>
+						</div>
+				</div>
+			<% } %>
+		</div>
+		<div class="container section">
+			<div class="row" id="contact-seller">
+				<div class="col-lg-12">
+					<h3>Contact Seller:</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">Phone: <a href="tel:<%= listing.phone%>"><%= listing.phone%></a></div>
+				<div class="col-lg-3 col-xs-6">Email: <a href="mailto:<%= listing.email%>"><%= listing.email%></a></div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Overview:</h3>
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">Price: <%=listing.price%></div>
+				<div class="col-lg-3 col-xs-6">Type: <%=listing.listing_type%></div>
+				<div class="col-lg-3 col-xs-6">Description: <%=listing.description%></div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Building details:</h3>
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">Bedrooms: <%=listing.bedrooms%></div>
+				<div class="col-lg-3 col-xs-6">Bathrooms: <%=listing.bathrooms%></div>
+				<div class="col-lg-3 col-xs-6">Area: <%=listing.floor_space%> sqft</div>
+				<div class="col-lg-3 col-xs-6">Building type: <%=listing.building_type%></div>
+				<div class="col-lg-3 col-xs-6">Storeys: <%=listing.storeys%></div>
+				<div class="col-lg-3 col-xs-6">Appliances: <%=listing.appliances%></div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Property details:</h3>
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">Property age: <%=listing.property_age%></div>
+				<div class="col-lg-3 col-xs-6">Annual property tax: <%=listing.annual_property_tax%></div>
+				<div class="col-lg-3 col-xs-6">Parking type: <%=listing.parking_type%></div>
+				<div class="col-lg-3 col-xs-6">Amenities: <%=listing.amenities%></div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Location details:</h3>
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">Country: <%=listing.country%></div>
+				<div class="col-lg-3 col-xs-6">Province: <%=listing.province_state%></div>
+				<div class="col-lg-3 col-xs-6">Address: <%=listing.address%></div>
+				<div class="col-lg-3 col-xs-6">Postal code: <%=listing.postal_code%></div>
+			</div>
+			<div id="map"></div>
+			<script
+				id="mapscript"
+				type="text/javascript"
+				address="<%= listing.address %> <%=listing.province_state%> <%=listing.country%>"
+				src="/js/initMap.js"
+			></script>
+			<script
+				src="https://maps.googleapis.com/maps/api/js?key=<%= API_KEY%>&callback=initMap"
+				async
+			></script>
+		</div>
+	</body>
+</html>

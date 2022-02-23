@@ -1,0 +1,22 @@
+#latest-listings {
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 1em;
+}
+
+#listings .latest-listing {
+    display: inline;
+}
+
+#demo {
+    padding:1em;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    background-color: #212529a1;
+}

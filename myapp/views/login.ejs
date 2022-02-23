@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css" />
+    <title>Login</title>
+</head>
+<body class = "container">
+    <form action="/login" method="post" class = "login-form">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <h1>Login Here</h1>
+        <div class ="flex-input">
+            <label for="">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class ="flex-input">
+            <label for="">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <div>
+            <button type="submit">Submit </button>
+        </div>   
+        <div class = "link-container">
+            <a href="/register">Click Here to Sign Up</a>
+        </div> 
+    </form>
+</body>
+</html>

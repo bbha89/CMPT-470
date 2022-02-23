@@ -1,0 +1,17 @@
+- git clone https://csil-git1.cs.surrey.sfu.ca/jta118/470-proj.git
+- Git tag: final_implementation
+- run docker-compose build; docker-compose up
+- open browser and head to localhost:8080/ which will redirect users to the login page localhost:8080/login
+- Users can register for an account which gets inserted in the database for logging in
+- Register your own account for testing through sign up link in login page or through url: http://localhost:8080/register
+- username: admin password: admin are already inserted into the database
+- Users are redirected to the homepage after logging in
+- Homepage includes a navbar and the latest 3 posted listing with the latest listing showing first
+- Navbar has a dropdown menu for users to log out and get redirected to the login page
+- Navbar also contains a view profile option where users can see user details and make updates to posted listings or user details
+- Navbar buy link redirects users to a search filter where they can find posted listings by Country and City
+- Users can add a listing through the navbar sell link
+- Each listing contains a map of where house posting is located as well an edit listing feature
+- Users not logged in will be redirected to the login page if they attempt to access profile, homepage or view/edit listings
+- Users who have logged in already will be redirected to homepage if they attempt to sign in again
+- Find Roommate is a not working feature but for future development

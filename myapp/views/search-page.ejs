@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/search.css" />
+    <title>Search</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="container">    
+        <form action="/filter/search" method="post" class = "search-form">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <label>Country</label>
+            <input type="text" name="country" placeholder="Canada">
+            <label>City</label>
+            <input type="text" name="city" placeholder="Vancouver">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

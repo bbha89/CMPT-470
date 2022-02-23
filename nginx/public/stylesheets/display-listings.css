@@ -1,0 +1,13 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.content {
+    text-align: center;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}

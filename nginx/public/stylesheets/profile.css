@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size:  16px;
+    font-family: "Gill Sans", sans-serif;
+    padding: 10px;
+}
+
+.login-form {
+    color: black;
+    background-color: lightgray;
+    padding: 10px;
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+
+.flex-input {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.labels {
+    flex-basis: 130px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+h1 {
+    display: flex;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+input[type="text"],
+[type="password"],
+[type="email"] {
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="tel"],
+[type="password"],
+[type="email"] {
+    padding: 10px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-container a{
+    text-decoration: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin: 20px 0px 0px 0px;
+    border-radius: 3px;
+} 
+
+.link-container a:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
+
+.link-container2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    margin: 0px 0px 20px 0px;
+    border-radius: 3px;
+}
+
+.link-container2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.link-container3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+.link-container3 a{
+    text-decoration: none;
+    color: white;
+}
